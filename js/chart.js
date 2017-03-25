@@ -8,12 +8,20 @@ var mobileChart = document.getElementById('mobileChart');
 var closeAlert = document.querySelector('.close_alert');
 var alertSpan = document.querySelector('.alert');
 
+// Message alert
+var userSearch = document.querySelector('.user_search');
+var userMessage = document.querySelector('.user_message')
+var sendMessage = document.querySelector('.submit');
+
+
+
 // Traffic line Chart
 var allTrafficChart = new Chart (allTraffic, {
   type: 'line',
   data: {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
+      label: 'Users',
       data: ['750', '1250', '1000', '1500', '2000', '1500', '1750', '1250', '1750', '2250', '1750'],
       fill: true,
       lineTension: 0,
@@ -45,7 +53,7 @@ var dailyChart = new Chart(dailyChart, {
     data: {
         labels: ["S", "M", "T", "W", "T", "F", "S"],
         datasets: [{
-            label: '# of Votes',
+            label: 'Daily Users',
             data: [75, 100, 175, 125, 225, 200, 100],
             lineTension: 20,
             backgroundColor: [
@@ -119,3 +127,15 @@ closeAlert.addEventListener ('click', closeBox);
  function closeBox() {
   alertSpan.style.display = "none";
 }
+
+// Form alert
+
+function userError() {
+  if (userMessage.value.length == 0 || userSearch.value.length == 0) {
+    alert("Please complete form");
+  } else  {
+    alert("Message Sent");
+  }
+};
+
+sendMessage.addEventListener("click", userError);

@@ -42,9 +42,12 @@ header h1 {
   align-items: center;
 }
 
+.notification {
+  position: relative;
+}
+
 .bell {
   display: inline-block;
-  position: relative;
   height: 25px;
   padding-right: 10px;
   padding-top: 5px;
@@ -58,8 +61,8 @@ header h1 {
   height: 7px;
   background-color: #85DD7F;
   border-radius: 50%;
-  top: 13px;
-  right: 120px;
+  top: 1px;
+  right: 10px;
 }
 
 .user_name,
@@ -131,12 +134,10 @@ header h1 {
   background-color: #7377BF;
   color: #fff;
   padding: 5px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin: 10px auto;
   border-radius: 3px;
-  float: left;
   height: 30px;
-  width: 300px
+  width: 90%;
 }
 
 
@@ -152,7 +153,7 @@ header h1 {
 
 /* TRAFFIC HEADING STYLES */
 .traffic-chart {
-  display: flex;
+  display: block;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -163,7 +164,7 @@ header h1 {
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 280px;
+  width: 280px;
   margin: auto;
 }
 
@@ -171,23 +172,30 @@ header h1 {
   list-style: none;
 }
 
-.traffic-chart canvas {
-  padding: 10px 0px 10px;
-  margin: auto;
-}
 
 /* CHART STYLES */
+.traffic-chart,
+.daily_traffic,
+.mobile_users {
+  margin: 20px 10px;
+}
 
 .charts h3 {
   display: inline-block;
   margin: auto;
 }
 
+.traffic-chart canvas {
+  padding: 10px 0px 10px;
+  margin: auto;
+}
 
 
 /* DATA STYLES */
 
-
+.social_title {
+  margin-top: 100px;
+}
 
 .social-stats {
   display: flex;
@@ -195,7 +203,7 @@ header h1 {
   justify-content: space-around;
 }
 
-.social-stats div {
+.social_widget {
   border: solid 2px lightgray;
   border-radius: 3px;
   background-color: #FBFBFB;
@@ -204,19 +212,25 @@ header h1 {
   margin: 10px auto;
 }
 
-.social-stats div svg {
-  height: 30px;
+.svg_container {
+  position: relative;
   background-color: #7377BF;
   border-radius: 50%;
-  padding: 15px;
   float: left;
   margin: 10px 15px;
+  height: 60px;
+  width: 60px;
 }
 
 .twitter_svg,
 .fb_svg,
 .google_svg {
+  display: block;
   fill: #fff;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .social-stats div h1 {
@@ -279,8 +293,12 @@ header h1 {
   border-bottom: solid 2px lightgray;
 }
 
-.user_5 {
-  borde
+.members .user_5 {
+  border-bottom: none;
+}
+
+.activity .user_5 {
+  border-bottom: none;
 }
 
 /* MESSAGE AREA STYLES */
@@ -297,7 +315,7 @@ header h1 {
     margin-bottom: 10px
 }
 
- .message_form input[type="textarea"] {
+ .message_form textarea {
    -webkit-appearance: none;
    color: grey;
    width: 90%;
@@ -430,48 +448,90 @@ footer a:visited {
     height: 30px;
   }
 
+/* TRAFFIC CHART STYLES*/
+  .traffic_title {
+    display: flex;
+    justify-content: space-between;
+  }
+
 /* LOWER CHART STYLES*/
   .lower_charts {
     display: flex;
     flex-direction: row;
+    border-top: solid 2px lightgray;
+    border-bottom: solid 2px lightgray;
   }
 
   .lower_charts div {
     width: 100%;
-    margin: auto;
+  }
+
+  .daily_traffic {
+    border-right: solid 2px lightgray;
+  }
+
+  /* SOCIAL STATS STYLES*/
+  .social_title {
+    margin-top: 20px;
   }
 
   .social-stats {
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
+
+  .social_widget {
+    width: 280px;
+  }
+
 
   /* MEMBER/ACTIVITY STYLES*/
   .members,
   .activity {
     width: 100%;
-    margin: auto;
   }
 
   .members div {
     width: 100%;
+    border-right: solid 2px lightgray;
   }
 
-  .activity {
-    margin-top: 0px;
+  .members .members_title,
+  .activity .activity_title {
+    border-bottom: none;
+  }
+
+  .members div,
+  .activity div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: .7em;
   }
 
   .user_info {
     flex-direction: row;
   }
 
+  .user_info div img {
+    margin-bottom: 15px;
+  }
+
+/* LOWER WRAPPER STYLES */
+
   .lower_wrapper {
     flex-direction: row;
+  }
+
+  .settings {
+    border-left: solid 2px lightgray;
   }
 
   .message_form,
   .settings {
     width: 100%;
-    margin: auto;
+    margin: 0px auto;
   }
 
   footer {
@@ -484,4 +544,14 @@ footer a:visited {
 
 @media (min-width: 1024px) {
 
+  .page-title h2 {
+  margin-top: 10px;
+  }
+
+  .search_bar {
+    display: inline-block;
+    width: 80%;
+    float: right;
+    border-left: solid 2px #ededed;
+  }
 }
