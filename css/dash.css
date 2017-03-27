@@ -462,12 +462,14 @@ footer a:visited {
     border-bottom: solid 2px lightgray;
   }
 
-  .lower_charts div {
-    width: 100%;
-  }
 
   .daily_traffic {
     border-right: solid 2px lightgray;
+    width: 49%;
+  }
+
+  .mobile_users {
+    width: 50%;
   }
 
   /* SOCIAL STATS STYLES*/
