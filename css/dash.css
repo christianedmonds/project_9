@@ -26,6 +26,10 @@ header {
   color: #fff;
 }
 
+header a {
+  color: #fff;
+}
+
 header a:visited {
   color: #fff;
 }

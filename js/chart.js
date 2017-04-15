@@ -7,6 +7,7 @@ var mobileChart = document.getElementById('mobileChart');
 //Alert box
 var closeAlert = document.querySelector('.close_alert');
 var alertSpan = document.querySelector('.alert');
+var dot = document.querySelector('.dot');
 
 // Message alert
 var userSearch = document.querySelector('.user_search');
@@ -126,7 +127,10 @@ closeAlert.addEventListener ('click', closeBox);
 
  function closeBox() {
   alertSpan.style.display = "none";
+  dot.style.display = "none";
 }
+
+
 
 // Form alert
 
